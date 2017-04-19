@@ -24,7 +24,10 @@ class GridView extends Component {
 
   static get propTypes() {
     return {
-      data: PropTypes.array,
+      data: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object
+      ]),
       fillMissingItems: PropTypes.bool,
       itemsPerRow: PropTypes.number,
       itemsPerRowLandscape: PropTypes.number,
